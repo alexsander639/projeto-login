@@ -9,6 +9,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -19,23 +20,33 @@ body{
 }
 
 main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
     position: absolute;
     background-color: white;
     width: 70vw;
     height: 70vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.422);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 #imagem{
+    display: block;
     height: 30vh;
-    background: black url(../imagens/building.jpg) no-repeat center center;
+    background: #5f2c82 url(../imagens/building.jpg) no-repeat center center;
     background-size: cover;
-    border-radius: 20px 20px 0px 0px;
+}
+
+#formulario{
+    display: block;
 }
 
 .campo{
@@ -48,11 +59,16 @@ main{
     border-radius: 10px;
 }
 
+.campo > label > span{
+    padding-bottom: 0px;
+}
+
 .campo > input{
     background-color: #94cfcd;
     color: white;
     border-radius: 5px;
     line-height: 2em;
+    width: 80%;
     margin-bottom: 5px;
     border-style: none;
 }
@@ -62,6 +78,7 @@ main{
     color: #49a09d;
     text-decoration: none;
     margin: auto;
+    margin-top: 10px;
     padding: 10px 80px;
     border: 1px solid #49a09d;
     border-radius: 5px;
