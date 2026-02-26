@@ -25,61 +25,93 @@ main{
     height: 100vh;
 }
 
-section{
+#login{
     position: absolute;
     background-color: white;
-    width: 70vw;
-    height: 70vh;
+    width: 370px;
+    height: 560px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.422);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
+    transform: translate(-50%, -50%);
 }
 
 #imagem{
     display: block;
-    height: 30vh;
+    height: 240px;
     background: #5f2c82 url(../imagens/building.jpg) no-repeat center center;
     background-size: cover;
 }
 
 #formulario{
     display: block;
+    width: 350px;
+    margin: auto;
+    font-size: 1em;
 }
 
 .campo{
     background-color: #5f2c82;
-    color: white;
-    width: 300px;
+    width: 80%;
     margin: auto;
     margin-top: 5px;
     padding: 5px;
     border-radius: 10px;
 }
+.campo > label{
+    width: 10%;
+    line-height: 2em;
+}
 
 .campo > label > span{
-    padding-bottom: 0px;
+    color: white;
+    width: 24px;
 }
 
 .campo > input{
     background-color: #94cfcd;
-    color: white;
     border-radius: 5px;
     line-height: 2em;
-    width: 80%;
-    margin-bottom: 5px;
+    width: calc(100% - 40px);
+    margin: 5px 5px;
     border-style: none;
 }
 
+.campo > input:focus-within{
+    background-color: white;
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 80%;
+    height: 2.5em;
+    margin: auto;
+    margin-top: 10px;
+
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: #2a5d5b;
+}
+
 .botao{
+    display: block;
     background-color: white;
     color: #49a09d;
     text-decoration: none;
+    width: 80%;
+    height: 2.5em;
     margin: auto;
     margin-top: 10px;
-    padding: 10px 80px;
+    padding: 6px;
     border: 1px solid #49a09d;
     border-radius: 5px;
 }
@@ -87,4 +119,8 @@ section{
 .botao:hover{
     background-color: #49a09d;
     color: white;
+}
+
+.botao > span{
+    font-size: 0.9em;
 }
